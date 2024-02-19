@@ -1,0 +1,32 @@
+<template>
+  <div class="background-home h-screen bg-cover bg-center">
+    <!-- <Navbar /> -->
+
+    <section class="justify-around flex items-center pt-72 mx-8 ">
+      <div class="mr-10 w-96 text-white">
+        <p class="uppercase text-xl">So, you want to travel to</p>
+        <h1 class="uppercase text-[150px]">Space</h1>
+        <p class="text-lg">
+          Let’s face it; if you want to go to space, you might as well genuinely
+          go to outer space and not hover kind of on the edge of it. Well sit
+          back, and relax because we’ll give you a truly out of this world
+          experience!
+        </p>
+      </div>
+
+      <button class="h-64 w-64 rounded-full bg-white text-4xl">EXPLORE</button>
+    </section>
+  </div>
+</template>
+
+<script setup>
+
+</script>
+
+<style scoped>
+.background-home {
+  background-image: url("../assets/home/background-home-desktop.jpg");
+}
+
+
+</style>
