@@ -1,9 +1,9 @@
 <template>
   <div class="background-destination h-screen bg-cover bg-center text-white">
     <div class="pt-72 laptop:px-36">
-      <h2 class="text-4xl uppercase">
+      <h1 class="text-4xl uppercase">
         <span class="font-bold text-gray-400">01</span> Pick your destination
-      </h2>
+      </h1>
 
       <div class="flex justify-between items-center pt-24 desktop:mx-10">
         <div class="w-[445px] h-[445px]">
@@ -11,15 +11,15 @@
           <img class="max-w-max"  id="img" :src="dataDestinations[`${selected}`].images.webp" alt="image de la lune" />
         </div>
           
-        <section class="ml-24 p-4 h-[450px] flex flex-col justify-between">
+        <section class="ml-24 p-4 h-[450px] max-w-[650px] flex flex-col justify-between">
             <ul class="flex gap-8 ">
-              <li class="hover:cursor-pointer" @click="selected = 0">MOON</li>
-              <li class="hover:cursor-pointer" @click="selected = 1">MARS</li>
-              <li class="hover:cursor-pointer" @click="selected = 2">EUROPA</li>
-              <li class="hover:cursor-pointer" @click="selected = 3">TITAN</li>
+              <li class="hover:cursor-pointer relative" :class="{active: selected === 0}" @click="toggleActive(0)">MOON</li>
+              <li class="hover:cursor-pointer relative" :class="{active: selected === 1}" @click="toggleActive(1)">MARS</li>
+              <li class="hover:cursor-pointer relative" :class="{active: selected === 2}" @click="toggleActive(2)">EUROPA</li>
+              <li class="hover:cursor-pointer relative" :class="{active: selected === 3}" @click="toggleActive(3)">TITAN</li>
             </ul>
 
-          <h1 class="uppercase text-[100px] py-4">{{ dataDestinations[`${selected}`].name }}</h1>
+          <h2 class="uppercase text-[100px] py-4">{{ dataDestinations[`${selected}`].name }}</h2>
           <p class="text-wrap">{{ dataDestinations[`${selected}`].description }}</p>
           <div class="flex justify-between pt-8 ">
             <div>
@@ -43,15 +43,36 @@ import { ref } from "vue";
 
 const dataDestinations = data.destinations;
 const selected = ref(0);
+function toggleActive(index) {
+  selected.value = index;
+  console.log(selected.value);
+}
 </script>
 
-<style>
+<style scoped>
 .background-destination {
   background-image: url("@/assets/destination/background-destination-desktop.jpg");
 }
 
-.active {
-  border-bottom: 2px solid white;
+.active::after {
+  content: '';
+  position: absolute;
+  bottom: -13px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+}
+ul li:hover::after {
+  cursor: pointer;
+  content: '';
+  position: absolute;
+  bottom: -13px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  opacity: 0.5;
 }
 
 </style>

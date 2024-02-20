@@ -1,27 +1,58 @@
 <template>
-  <div class="ml-8 p-8 pr-0 flex items-center justify-between text-xl
-  fixed top-0 left-0 w-full z-20">
-    <div class="w-14 h-14">
+  <div
+    class="fixed left-0 top-0 z-20 ml-8 flex w-full items-center justify-between p-8 pr-0 text-xl"
+  >
+    <div class="flex h-14 w-14 items-center">
       <img
-        class="max-w-max object-contain "
+        class="max-w-max object-contain"
         src="../assets/shared/logo.svg"
         alt="logo du site etoile a 4 piques"
       />
     </div>
-    <span class="border-b border-gray-300 flex-grow ml-8"></span>
-    <nav class="flex px-24 py-6 gap-8 text-white bg-slate-900">
-      <router-link to="/"><span class="font-bold">00</span> Home</router-link>
-      <router-link to="/Destination"><span class="font-bold">01</span> Destination</router-link>
-      <router-link to="/Crew"><span class="font-bold">02</span> Crew</router-link>
-      <router-link to="/Technology"><span class="font-bold">03</span> Technology</router-link>
-    </nav>
+    <span class="ml-8 flex-grow border-b border-gray-300 opacity-25"></span>
+    <ul class="nav relative flex gap-8 bg-slate-900 px-24 py-6 text-white">
+      <li class="relative" @click="toggleActive(0)" :class="{active: isActive === 0}">
+        <router-link to="/"
+          ><span class="font-bold">00</span> Home</router-link
+        >
+      </li>
+      <li class="relative" @click="toggleActive(1)" :class="{active: isActive === 1}">
+        <router-link to="/Destination"
+          ><span class="font-bold">01</span> Destination</router-link
+        >
+      </li>
+      <li class="relative" @click="toggleActive(2)" :class="{active: isActive === 2}">
+        <router-link to="/Crew"
+          ><span class="font-bold">02</span> Crew</router-link
+        >
+      </li>
+      <li class="relative" @click="toggleActive(3)" :class="{active: isActive === 3}">
+        <router-link to="/Technology"
+          ><span class="font-bold">03</span> Technology</router-link
+        >
+      </li>
+    </ul>
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue';
+const isActive = ref(0);
+
+function toggleActive(index) {
+  isActive.value = index;
+}
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
-
+.active::after {
+  position: absolute;
+  content: "";
+  bottom: -23px;
+  left: 0px;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+}
 </style>
