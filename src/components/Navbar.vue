@@ -1,13 +1,14 @@
 <template>
   <div class="ml-8 p-8 pr-0 flex items-center justify-between text-xl
   fixed top-0 left-0 w-full z-20">
-    <div>
+    <div class="w-14 h-14">
       <img
-        class="w-14 h-14 object-contain "
+        class="max-w-max object-contain "
         src="../assets/shared/logo.svg"
         alt="logo du site etoile a 4 piques"
       />
     </div>
+    <span class="border-b border-gray-300 flex-grow ml-8"></span>
     <nav class="flex px-24 py-6 gap-8 text-white bg-slate-900">
       <router-link to="/"><span class="font-bold">00</span> Home</router-link>
       <router-link to="/Destination"><span class="font-bold">01</span> Destination</router-link>
