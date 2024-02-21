@@ -1,6 +1,6 @@
 <template>
   <div class="background-destination h-screen bg-cover bg-center text-white">
-    <div class="pt-72 laptop:px-36">
+    <div class=" laptop:px-36 pt-48">
       <h1 class="text-4xl uppercase">
         <span class="font-bold text-gray-400">01</span> Pick your destination
       </h1>
@@ -13,10 +13,10 @@
           
         <section class="ml-24 p-4 h-[450px] max-w-[650px] flex flex-col justify-between">
             <ul class="flex gap-8 ">
-              <li class="hover:cursor-pointer relative" :class="{active: selected === 0}" @click="toggleActive(0)">MOON</li>
-              <li class="hover:cursor-pointer relative" :class="{active: selected === 1}" @click="toggleActive(1)">MARS</li>
-              <li class="hover:cursor-pointer relative" :class="{active: selected === 2}" @click="toggleActive(2)">EUROPA</li>
-              <li class="hover:cursor-pointer relative" :class="{active: selected === 3}" @click="toggleActive(3)">TITAN</li>
+              <li class="hover:cursor-pointer relative hover:after:opacity-50" :class="{active: selected === 0}" @click="toggleActive(0)">MOON</li>
+              <li class="hover:cursor-pointer relative hover:after:opacity-50" :class="{active: selected === 1}" @click="toggleActive(1)">MARS</li>
+              <li class="hover:cursor-pointer relative hover:after:opacity-50" :class="{active: selected === 2}" @click="toggleActive(2)">EUROPA</li>
+              <li class="hover:cursor-pointer relative hover:after:opacity-50" :class="{active: selected === 3}" @click="toggleActive(3)">TITAN</li>
             </ul>
 
           <h2 class="uppercase text-[100px] py-4">{{ dataDestinations[`${selected}`].name }}</h2>
@@ -54,7 +54,7 @@ function toggleActive(index) {
   background-image: url("@/assets/destination/background-destination-desktop.jpg");
 }
 
-.active::after {
+.active::after, ul li:hover::after{
   content: '';
   position: absolute;
   bottom: -13px;
@@ -62,17 +62,6 @@ function toggleActive(index) {
   width: 100%;
   height: 3px;
   background-color: white;
-}
-ul li:hover::after {
-  cursor: pointer;
-  content: '';
-  position: absolute;
-  bottom: -13px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background-color: white;
-  opacity: 0.5;
 }
 
 </style>

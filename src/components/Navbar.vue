@@ -11,22 +11,22 @@
     </div>
     <span class="ml-8 flex-grow border-b border-gray-300 opacity-25"></span>
     <ul class="nav relative flex gap-8 bg-slate-900 px-24 py-6 text-white">
-      <li class="relative" @click="toggleActive(0)" :class="{active: isActive === 0}">
+      <li class="relative hover:after:opacity-50" @click="toggleActive(0)" :class="{active: isActive === 0}">
         <router-link to="/"
           ><span class="font-bold">00</span> Home</router-link
         >
       </li>
-      <li class="relative" @click="toggleActive(1)" :class="{active: isActive === 1}">
+      <li class="relative hover:after:opacity-50" @click="toggleActive(1)" :class="{active: isActive === 1}">
         <router-link to="/Destination"
           ><span class="font-bold">01</span> Destination</router-link
         >
       </li>
-      <li class="relative" @click="toggleActive(2)" :class="{active: isActive === 2}">
+      <li class="relative hover:after:opacity-50" @click="toggleActive(2)" :class="{active: isActive === 2}">
         <router-link to="/Crew"
           ><span class="font-bold">02</span> Crew</router-link
         >
       </li>
-      <li class="relative" @click="toggleActive(3)" :class="{active: isActive === 3}">
+      <li class="relative hover:after:opacity-50" @click="toggleActive(3)" :class="{active: isActive === 3}">
         <router-link to="/Technology"
           ><span class="font-bold">03</span> Technology</router-link
         >
@@ -46,7 +46,7 @@ function toggleActive(index) {
 
 <style scoped>
 
-.active::after {
+.active::after, ul li:hover::after{
   position: absolute;
   content: "";
   bottom: -23px;
@@ -55,4 +55,5 @@ function toggleActive(index) {
   height: 3px;
   background-color: white;
 }
+
 </style>

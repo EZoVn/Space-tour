@@ -15,7 +15,7 @@
       </div>
 
       <router-link to="/Destination">
-        <button class="h-64 w-64 rounded-full bg-white text-4xl">
+        <button class="h-64 w-64 rounded-full bg-white text-4xl effect">
           EXPLORE
         </button>
       </router-link>
@@ -29,4 +29,9 @@
 .background-home {
   background-image: url("../assets/home/background-home-desktop.jpg");
 }
+.effect:hover {
+  box-shadow: 0 0 .1em 2em rgba(200, 200, 200, 0.112);
+  transition: all 0.5s;
+}
+
 </style>
