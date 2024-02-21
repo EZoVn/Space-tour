@@ -5,14 +5,14 @@
         <span class="font-bold text-gray-400">03</span> Space launch 101
       </h1>
 
-      <div class="flex container mt-32 gap-4 items-center">
+      <div class="flex container mt-32 gap-4 items-center ml-16">
         <div class="flex gap-8 flex-col">
           <span :class="{isActive: selectedTechnology === 0}" class="selectedNumber" @click="toggleActiveTechnology(0)">1</span>
           <span :class="{isActive: selectedTechnology === 1}" class="selectedNumber" @click="toggleActiveTechnology(1)">2</span>
           <span :class="{isActive: selectedTechnology === 2}" class="selectedNumber" @click="toggleActiveTechnology(2)">3</span>
         </div>
         <div class="">
-          <h2 class="opacity-25 uppercase text-4xl">{{ dataTechnology[`${selectedTechnology}`].title }}</h2>
+          <p class="uppercase">The terminology ...</p>
           <p class="text-6xl uppercase pt-4 pb-8">{{ dataTechnology[`${selectedTechnology}`].name }}</p>
           <p >{{ dataTechnology[`${selectedTechnology}`].description }}</p>
         </div>
