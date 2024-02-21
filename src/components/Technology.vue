@@ -17,7 +17,7 @@
           <p >{{ dataTechnology[`${selectedTechnology}`].description }}</p>
         </div>
         <div class="container">
-          <img class="w-full h-full" :src="dataTechnology[`${selectedTechnology}`].images.portrait" alt="">
+          <img class="w-full h-full" :src="dataTechnology[`${selectedTechnology}`].images.portrait" alt="Photo du véhicule">
         </div>
       </div>
     </div>
