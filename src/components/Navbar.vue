@@ -5,7 +5,7 @@
     <div class="flex h-14 w-14 items-center">
       <img
         class="max-w-max object-contain"
-        src="../assets/shared/logo.svg"
+        src="/assets/shared/logo.svg"
         alt="logo du site etoile a 4 piques"
       />
     </div>

@@ -27,7 +27,7 @@
 
 <style scoped>
 .background-home {
-  background-image: url("../assets/home/background-home-desktop.jpg");
+  background-image: url("/assets/home/background-home-desktop.jpg");
 }
 .effect:hover {
   box-shadow: 0 0 .1em 2em rgba(200, 200, 200, 0.112);

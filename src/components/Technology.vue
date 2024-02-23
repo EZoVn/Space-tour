@@ -26,7 +26,7 @@
 </template>
 <script setup>
 import { ref } from 'vue';
-import data from '../assets/data.json';
+import data from '/src/data.json';
 
 const dataTechnology = data.technology;
 const selectedTechnology = ref(0);
@@ -38,7 +38,7 @@ console.log(dataTechnology);
 
 <style scoped>
 .background-technology {
-  background-image: url("@/assets/technology/background-technology-desktop.jpg");
+  background-image: url("/assets/technology/background-technology-desktop.jpg");
 }
 .selectedNumber{
   @apply rounded-full border h-20 w-20 flex items-center justify-center border-opacity-25 border-white text-lg;

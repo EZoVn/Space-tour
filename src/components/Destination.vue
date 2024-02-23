@@ -38,7 +38,7 @@
 </template>
 
 <script setup>
-import data from "../assets/data.json";
+import data from "/src/data.json";
 import { ref } from "vue";
 
 const dataDestinations = data.destinations;
@@ -51,7 +51,7 @@ function toggleActive(index) {
 
 <style scoped>
 .background-destination {
-  background-image: url("@/assets/destination/background-destination-desktop.jpg");
+  background-image: url("/assets/destination/background-destination-desktop.jpg");
 }
 
 .active::after, ul li:hover::after{
