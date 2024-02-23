@@ -9,6 +9,10 @@ export default {
         'laptop': '1024px',
         'desktop': '1440px',
       },
+      colors: {
+        'primaryLight': '#D0D6F9',
+        'secondaryDark': '#0B0D17',
+      },
     },
   },
   plugins: [],

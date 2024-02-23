@@ -1,5 +1,5 @@
 <template>
-  <div class="background-technology h-screen bg-cover bg-center text-white">
+  <div class="background-technology h-screen bg-cover bg-center text-white ">
     <div class="pt-48 laptop:px-36 desktop:px-8">
       <h1 class="text-4xl uppercase">
         <span class="font-bold text-gray-400">03</span> Space launch 101
@@ -11,13 +11,13 @@
           <span :class="{isActive: selectedTechnology === 1}" class="selectedNumber" @click="toggleActiveTechnology(1)">2</span>
           <span :class="{isActive: selectedTechnology === 2}" class="selectedNumber" @click="toggleActiveTechnology(2)">3</span>
         </div>
-        <div class="">
-          <p class="uppercase">The terminology ...</p>
+        <div class="w-full h-80 text-balance text-lg">
+          <p class="uppercase text-primaryLight">The terminology ...</p>
           <p class="text-6xl uppercase pt-4 pb-8">{{ dataTechnology[`${selectedTechnology}`].name }}</p>
-          <p >{{ dataTechnology[`${selectedTechnology}`].description }}</p>
+          <p class="text-primaryLight">{{ dataTechnology[`${selectedTechnology}`].description }}</p>
         </div>
         <div class="container">
-          <img class="w-full h-full" :src="dataTechnology[`${selectedTechnology}`].images.portrait" alt="Photo du véhicule">
+          <img class="w-[515px] h-[527px]" :src="dataTechnology[`${selectedTechnology}`].images.portrait" alt="Photo du véhicule">
         </div>
       </div>
     </div>
@@ -33,7 +33,6 @@ const selectedTechnology = ref(0);
 function toggleActiveTechnology(index) {
   selectedTechnology.value = index;
 }
-console.log(dataTechnology);
 </script>
 
 <style scoped>

@@ -13,22 +13,22 @@
           
         <section class="ml-24 p-4 h-[450px] max-w-[650px] flex flex-col justify-between">
             <ul class="flex gap-8 ">
-              <li class="hover:cursor-pointer relative hover:after:opacity-50" :class="{active: selected === 0}" @click="toggleActive(0)">MOON</li>
-              <li class="hover:cursor-pointer relative hover:after:opacity-50" :class="{active: selected === 1}" @click="toggleActive(1)">MARS</li>
-              <li class="hover:cursor-pointer relative hover:after:opacity-50" :class="{active: selected === 2}" @click="toggleActive(2)">EUROPA</li>
-              <li class="hover:cursor-pointer relative hover:after:opacity-50" :class="{active: selected === 3}" @click="toggleActive(3)">TITAN</li>
+              <li class="hover:cursor-pointer barlowFont tracking-wider text-primaryLight relative hover:after:opacity-50" :class="{active: selected === 0}" @click="toggleActive(0)">MOON</li>
+              <li class="hover:cursor-pointer barlowFont tracking-wider text-primaryLight relative hover:after:opacity-50" :class="{active: selected === 1}" @click="toggleActive(1)">MARS</li>
+              <li class="hover:cursor-pointer barlowFont tracking-wider text-primaryLight relative hover:after:opacity-50" :class="{active: selected === 2}" @click="toggleActive(2)">EUROPA</li>
+              <li class="hover:cursor-pointer barlowFont tracking-wider text-primaryLight relative hover:after:opacity-50" :class="{active: selected === 3}" @click="toggleActive(3)">TITAN</li>
             </ul>
 
           <h2 class="uppercase text-[100px] py-4">{{ dataDestinations[`${selected}`].name }}</h2>
-          <p class="text-wrap">{{ dataDestinations[`${selected}`].description }}</p>
+          <p class="text-wrap text-primaryLight text-lg">{{ dataDestinations[`${selected}`].description }}</p>
           <div class="flex justify-between pt-8 ">
             <div>
-              <p>AVG. DISTANCE</p>
-              <p>{{ dataDestinations[`${selected}`].distance }}</p>
+              <p class="barlowFont tracking-wide text-primaryLight">AVG. DISTANCE</p>
+              <p class="text-2xl">{{ dataDestinations[`${selected}`].distance }}</p>
             </div>
             <div>
-              <p>EST. TRAVEL TIME</p>
-              <p>{{ dataDestinations[`${selected}`].travel }}</p>
+              <p class="barlowFont tracking-wide text-primaryLight">EST. TRAVEL TIME</p>
+              <p class="text-2xl">{{ dataDestinations[`${selected}`].travel }}</p>
             </div>
           </div>
         </section>
@@ -63,5 +63,7 @@ function toggleActive(index) {
   height: 3px;
   background-color: white;
 }
-
+.active{
+  color: white;
+}
 </style>

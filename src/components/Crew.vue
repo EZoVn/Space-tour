@@ -13,7 +13,7 @@
           <p class="pb-8 pt-4 text-6xl uppercase">
             {{ dataCrew[`${selectedCrew}`].name }}
           </p>
-          <p>{{ dataCrew[`${selectedCrew}`].bio }}</p>
+          <p class="text-primaryLight text-lg">{{ dataCrew[`${selectedCrew}`].bio }}</p>
         </div>
         <div class="left-30 absolute bottom-20">
           <span
@@ -70,7 +70,7 @@ function toggleActiveCrew(index) {
   width: 15px;
   height: 15px;
   border-radius: 99%;
-  margin-right: 18px;
+  margin-right: 22px;
   margin-top: 120px;
   @apply bg-gray-400;
 }

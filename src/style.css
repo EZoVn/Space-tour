@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.cdnfonts.com/css/barlow-condensed");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: bellefair, sans-serif;
+  overflow: clip;
+}
+.barlowFont {
+  font-family: "Barlow Condensed", sans-serif;
+}
