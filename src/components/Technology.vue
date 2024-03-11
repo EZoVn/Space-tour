@@ -1,7 +1,7 @@
 <template>
   <div class="background-technology h-screen bg-cover bg-center text-white ">
-    <div class="pt-48 laptop:px-36 desktop:px-8">
-      <h1 class="text-4xl uppercase">
+    <div class="laptop:pt-48 laptop:px-36 desktop:px-8 tablet:pt-24">
+      <h1 class="laptop:text-4xl uppercase tablet:text-xl tablet:ml-10">
         <span class="font-bold text-gray-400">03</span> Space launch 101
       </h1>
 
@@ -48,4 +48,5 @@ function toggleActiveTechnology(index) {
 .isActive{
   @apply bg-white text-black;
 }
+
 </style>

@@ -1,17 +1,16 @@
 <template>
   <div class="background-destination h-screen bg-cover bg-center text-white">
-    <div class=" laptop:px-36 pt-48">
-      <h1 class="text-4xl uppercase">
+    <div class=" laptop:px-36 laptop:pt-48 tablet:pt-24">
+      <h1 class="laptop:text-4xl uppercase tablet:text-xl tablet:ml-10">
         <span class="font-bold text-gray-400">01</span> Pick your destination
       </h1>
 
-      <div class="flex justify-between items-center pt-24 desktop:mx-10">
-        <div class="w-[445px] h-[445px]">
-
-          <img class="max-w-max"  id="img" :src="dataDestinations[`${selected}`].images.webp" alt="image de la lune" />
+      <div class="flex justify-between items-center pt-24 desktop:mx-10 tablet:flex-col laptop:flex-row">
+        <div class="laptop:w-[445px] laptop:h-[445px] tablet:w-[300px] tablet:h-[300px]">
+          <img class="laptop:max-w-max"  id="img" :src="dataDestinations[`${selected}`].images.webp" alt="image de la lune" />
         </div>
           
-        <section class="ml-24 p-4 h-[450px] max-w-[650px] flex flex-col justify-between">
+        <section class="laptop:ml-24 p-4 h-[450px] max-w-[650px] flex flex-col justify-between tablet:text-center tablet:px-20">
             <ul class="flex gap-8 ">
               <li class="hover:cursor-pointer barlowFont tracking-wider text-primaryLight relative hover:after:opacity-50" :class="{active: selected === 0}" @click="toggleActive(0)">MOON</li>
               <li class="hover:cursor-pointer barlowFont tracking-wider text-primaryLight relative hover:after:opacity-50" :class="{active: selected === 1}" @click="toggleActive(1)">MARS</li>
@@ -50,6 +49,7 @@ function toggleActive(index) {
 </script>
 
 <style scoped>
+
 .background-destination {
   background-image: url("/assets/destination/background-destination-desktop.jpg");
 }
@@ -65,5 +65,11 @@ function toggleActive(index) {
 }
 .active{
   color: white;
+}
+
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+  .background-destination{
+    background-image: url("/assets/destination/background-destination-tablet.jpg");
+  }
 }
 </style>

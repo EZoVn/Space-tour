@@ -5,9 +5,9 @@ export default {
     extend: {
       screens: {
         'mobile': '375px',
-        'tablet': '768px',
+        'tablet': '640px',
         'laptop': '1024px',
-        'desktop': '1440px',
+        'desktop': '1280px',
       },
       colors: {
         'primaryLight': '#D0D6F9',

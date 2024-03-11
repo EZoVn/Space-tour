@@ -1,7 +1,7 @@
 <template>
   <div class="background-crew h-screen bg-cover bg-center text-white">
-    <div class="laptop:px-36 pt-48">
-      <h1 class="text-4xl uppercase">
+    <div class="laptop:px-36 laptop:pt-48 tablet:pt-24">
+      <h1 class="laptop:text-4xl uppercase tablet:text-xl tablet:ml-10">
         <span class="font-bold text-gray-400">02</span> Meet your crew
       </h1>
 
