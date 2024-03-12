@@ -10,8 +10,8 @@
           <img class="laptop:max-w-max"  id="img" :src="dataDestinations[`${selected}`].images.webp" alt="image de la lune" />
         </div>
           
-        <section class="laptop:ml-24 p-4 h-[450px] max-w-[650px] flex flex-col justify-between tablet:text-center tablet:px-20">
-            <ul class="flex gap-8 ">
+        <section class="laptop:ml-24 p-4 h-[450px] max-w-[650px] flex flex-col justify-between tablet:text-center tablet:px-16">
+            <ul class="flex gap-8 tablet:justify-center laptop:justify-start">
               <li class="hover:cursor-pointer barlowFont tracking-wider text-primaryLight relative hover:after:opacity-50" :class="{active: selected === 0}" @click="toggleActive(0)">MOON</li>
               <li class="hover:cursor-pointer barlowFont tracking-wider text-primaryLight relative hover:after:opacity-50" :class="{active: selected === 1}" @click="toggleActive(1)">MARS</li>
               <li class="hover:cursor-pointer barlowFont tracking-wider text-primaryLight relative hover:after:opacity-50" :class="{active: selected === 2}" @click="toggleActive(2)">EUROPA</li>
@@ -20,7 +20,8 @@
 
           <h2 class="uppercase text-[100px] py-4">{{ dataDestinations[`${selected}`].name }}</h2>
           <p class="text-wrap text-primaryLight text-lg">{{ dataDestinations[`${selected}`].description }}</p>
-          <div class="flex justify-between pt-8 ">
+          <span class="flex-grow border-b border-gray-300 opacity-25 line"></span>
+          <div class="flex laptop:justify-between tablet: pt-8 tablet:justify-around">
             <div>
               <p class="barlowFont tracking-wide text-primaryLight">AVG. DISTANCE</p>
               <p class="text-2xl">{{ dataDestinations[`${selected}`].distance }}</p>
@@ -44,7 +45,6 @@ const dataDestinations = data.destinations;
 const selected = ref(0);
 function toggleActive(index) {
   selected.value = index;
-  console.log(selected.value);
 }
 </script>
 
@@ -70,6 +70,11 @@ function toggleActive(index) {
 @media screen and (min-width: 640px) and (max-width: 1024px) {
   .background-destination{
     background-image: url("/assets/destination/background-destination-tablet.jpg");
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 639px) {
+  .background-destination {
+    background-image: url("/assets/destination/background-destination-mobile.jpg");
   }
 }
 </style>

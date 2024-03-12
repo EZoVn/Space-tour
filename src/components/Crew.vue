@@ -5,17 +5,17 @@
         <span class="font-bold text-gray-400">02</span> Meet your crew
       </h1>
 
-      <section class="container mt-32">
-        <div class="w-1/2">
+      <section class="container laptop:mt-32 tablet:mt-20">
+        <div class="laptop:w-1/2 laptop:text-start laptop:px-0 tablet:text-center tablet:px-20">
           <h2 class="text-4xl uppercase opacity-25">
             {{ dataCrew[`${selectedCrew}`].role }}
           </h2>
-          <p class="pb-8 pt-4 text-6xl uppercase">
+          <p class="pb-8 pt-4 laptop:text-6xl uppercase tablet:text-5xl">
             {{ dataCrew[`${selectedCrew}`].name }}
           </p>
           <p class="text-primaryLight text-lg">{{ dataCrew[`${selectedCrew}`].bio }}</p>
         </div>
-        <div class="left-30 absolute bottom-20">
+        <div class="laptop:left-30 laptop:absolute laptop:bottom-20 tablet:text-center">
           <span
             @click="toggleActiveCrew(0)"
             class="spany"
@@ -39,7 +39,7 @@
         </div>
         <div>
           <img
-            class="absolute bottom-0 right-20"
+            class="laptop:absolute laptop:bottom-0 laptop:right-20 tablet:mx-auto tablet:w-[456px] tablet:h-[572px]"
             :src="dataCrew[`${selectedCrew}`].images.webp"
             alt="Photo du pilote"
           />
@@ -79,5 +79,18 @@ function toggleActiveCrew(index) {
 }
 .isActive {
   @apply bg-white;
+}
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+  .background-crew{
+    background-image: url("/assets/crew/background-crew-tablet.jpg");
+  }
+  .spany{
+    margin-top: 40px;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 639px) {
+  .background-crew {
+    background-image: url("/assets/crew/background-crew-mobile.jpg");
+  }
 }
 </style>
