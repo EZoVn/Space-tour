@@ -6,7 +6,7 @@
       </h1>
 
       <div
-        class="laptop:mt-32 laptop:ml-16 laptop:flex-row tablet:flex-col container flex items-center gap-4"
+        class="laptop:mt-32 laptop:ml-16 laptop:flex-row tablet:mt-14 tablet:flex-col container flex items-center gap-4"
       >
         <div class="laptop:flex-col laptop:pt-0 tablet:pt-10 tablet:flex-row flex gap-8 tablet:order-2 laptop:order-1">
           <span
