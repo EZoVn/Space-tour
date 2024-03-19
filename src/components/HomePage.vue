@@ -1,5 +1,5 @@
 <template>
-  <div class="background-home h-screen bg-cover bg-center">
+  <div class="background-home h-screen bg-cover bg-center mobile:overflow-y-auto">
     <section
       class="laptop:pt-96 mobile:flex-col tablet:pt-40 mobile:pt-28 mobile:text-center laptop:flex-row mx-8 flex items-center justify-around"
     >
@@ -18,7 +18,7 @@
         </p>
       </div>
 
-      <router-link to="/Destination" class="tablet:pt-32 mobile:pt-16">
+      <router-link to="/Destination" class="tablet:pt-32 mobile:pt-10">
         <button class="effect mobile:w-40 mobile:h-40 tablet:h-64 tablet:w-64 rounded-full bg-white tablet:text-4xl mobile:text-2xl">
           EXPLORE
         </button>
