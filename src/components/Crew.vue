@@ -1,5 +1,5 @@
 <template>
-  <div class="background-crew h-screen bg-cover bg-center text-white mobile:overflow-y-auto">
+  <div class="background-crew h-screen bg-cover bg-center text-white mobile:overflow-y-auto tablet:overflow-y-hidden">
     <div class="laptop:px-36 laptop:pt-48 mobile:pt-24">
       <h1 class="laptop:text-4xl uppercase tablet:text-xl tablet:ml-10 tablet:text-start mobile:text-center">
         <span class="font-bold text-gray-400">02</span> Meet your crew
